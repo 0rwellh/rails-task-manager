@@ -1,0 +1,13 @@
+
+<!--
+tu cherches à itérer sur tasks et à créer task
+-->
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= task.title %></li>
+    <%= link_to "voir la tâche", task_path(task) %>
+  <% end %>
+</ul>
+
+<%= link_to "new task", new_task_path %>
